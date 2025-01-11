@@ -1,0 +1,1575 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookbook</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" id="all-recipes" onclick="filterRecipesByCategory('all')" class="active">All Recipes</a>
+            
+                <a href="#" id="category-Appetizer" onclick="filterRecipesByCategory('Appetizer')">Appetizer</a>
+            
+                <a href="#" id="category-Curry" onclick="filterRecipesByCategory('Curry')">Curry</a>
+            
+                <a href="#" id="category-Dessert" onclick="filterRecipesByCategory('Dessert')">Dessert</a>
+            
+                <a href="#" id="category-Dip" onclick="filterRecipesByCategory('Dip')">Dip</a>
+            
+                <a href="#" id="category-Indian" onclick="filterRecipesByCategory('Indian')">Indian</a>
+            
+                <a href="#" id="category-Italian" onclick="filterRecipesByCategory('Italian')">Italian</a>
+            
+                <a href="#" id="category-Main Course" onclick="filterRecipesByCategory('Main Course')">Main Course</a>
+            
+                <a href="#" id="category-Mexican" onclick="filterRecipesByCategory('Mexican')">Mexican</a>
+            
+                <a href="#" id="category-Oven" onclick="filterRecipesByCategory('Oven')">Oven</a>
+            
+                <a href="#" id="category-Salad" onclick="filterRecipesByCategory('Salad')">Salad</a>
+            
+                <a href="#" id="category-Side Dish" onclick="filterRecipesByCategory('Side Dish')">Side Dish</a>
+            
+                <a href="#" id="category-Snacks" onclick="filterRecipesByCategory('Snacks')">Snacks</a>
+            
+                <a href="#" id="category-Soup" onclick="filterRecipesByCategory('Soup')">Soup</a>
+            
+                <a href="#" id="category-Thai" onclick="filterRecipesByCategory('Thai')">Thai</a>
+            
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <div class="search-bar">
+                <input type="text" id="search-bar" placeholder="Search for a recipe..." oninput="filterBySearch()">
+            </div>
+
+            <div class="recipe-list" id="recipe-list">
+                
+                    <div class="recipe-item" id="Tiramisu" data-category="Dessert, Italian">
+                        <div class="recipe-header">
+                            <h2>Tiramisu</h2>
+                            <div class="categories">Dessert, Italian</div>
+                        </div>
+                        <p><strong>Description:</strong> A classic Italian dessert with layers of coffee-soaked ladyfingers and creamy mascarpone filling.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Tiramisu')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Tiramisu" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Espresso/Coffee</span> <span class="quantity"></span></li>
+                                
+                                    <li><span>Eggs</span> <span class="quantity">4</span></li>
+                                
+                                    <li><span>Sugar</span> <span class="quantity">125 g</span></li>
+                                
+                                    <li><span>Mascarpone</span> <span class="quantity">500 g</span></li>
+                                
+                                    <li><span>Long finger cookies</span> <span class="quantity">250 g</span></li>
+                                
+                                    <li><span>Cacao powder</span> <span class="quantity"></span></li>
+                                
+                                    <li><span>Coffee Liquor</span> <span class="quantity"></span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">Brew some espresso and pour it into a deep plate/bowl.</li>
+                                
+                                    <li style="margin: 3px 0;">Separate the egg whites from the egg yolks. (We will use the egg whites later.)</li>
+                                
+                                    <li style="margin: 3px 0;">Mix the sugar with the egg yolks and stir until a smooth cream forms. Then, add the mascarpone and continue stirring until well combined.</li>
+                                
+                                    <li style="margin: 3px 0;">Beat the egg whites until stiff peaks form.</li>
+                                
+                                    <li style="margin: 3px 0;">Gently fold the stiff egg whites into the mascarpone mixture, a bit at a time.</li>
+                                
+                                    <li style="margin: 3px 0;">(Optional) Add coffee liquor to the espresso, to taste.</li>
+                                
+                                    <li style="margin: 3px 0;">Dip the long finger cookies in the espresso, ensuring they are soaked but not falling apart. Let them drain slightly and use them to cover the bottom of a pie mold.</li>
+                                
+                                    <li style="margin: 3px 0;">Spread half of the mascarpone mixture over the soaked cookies. Repeat the cookie and mascarpone layers.</li>
+                                
+                                    <li style="margin: 3px 0;">Place the tiramisu in the fridge for a few hours (overnight is preferable).</li>
+                                
+                                    <li style="margin: 3px 0;">Before serving, dust the tiramisu with cocoa powder using a sieve.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Red Lentil Dal" data-category="Main Course, Indian, Curry">
+                        <div class="recipe-header">
+                            <h2>Red Lentil Dal</h2>
+                            <div class="categories">Main Course, Indian, Curry</div>
+                        </div>
+                        <p><strong>Description:</strong> A comforting, flavor-packed Indian dal perfect for colder days. This rich lentil stew, infused with warming spices and creamy coconut, is a must-try whether you're vegan or not.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Red Lentil Dal')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Red Lentil Dal" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Olive oil</span> <span class="quantity">15 ml (1 tbsp)</span></li>
+                                
+                                    <li><span>Bay leaf</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Cumin seeds</span> <span class="quantity">10 g (1 tbsp)</span></li>
+                                
+                                    <li><span>Onion (medium)</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Garlic cloves</span> <span class="quantity">3</span></li>
+                                
+                                    <li><span>Ginger</span> <span class="quantity">5 cm piece</span></li>
+                                
+                                    <li><span>Chili</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Ground coriander</span> <span class="quantity">2.5 g (1/2 tsp)</span></li>
+                                
+                                    <li><span>Garam masala</span> <span class="quantity">5 g (1 tsp)</span></li>
+                                
+                                    <li><span>Turmeric</span> <span class="quantity">2.5 g (1/2 tsp)</span></li>
+                                
+                                    <li><span>Canned tomatoes</span> <span class="quantity">400 g</span></li>
+                                
+                                    <li><span>Vegetable broth</span> <span class="quantity">480 ml (2 cups)</span></li>
+                                
+                                    <li><span>Red lentils</span> <span class="quantity">190 g (1 cup)</span></li>
+                                
+                                    <li><span>Coconut cream</span> <span class="quantity">200-400 ml (1/2 - 1 can)</span></li>
+                                
+                                    <li><span>Lime juice</span> <span class="quantity">30 ml (from 1/2 lime)</span></li>
+                                
+                                    <li><span>Salt and pepper</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Nut butter (optional)</span> <span class="quantity">15 g (1 tbsp)</span></li>
+                                
+                                    <li><span>Fresh cilantro</span> <span class="quantity">a handful</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">Heat a pan and add olive oil, cumin seeds, and the bay leaf. Sauté for 30-60 seconds.</li>
+                                
+                                    <li style="margin: 3px 0;">Add the onion and cook until translucent.</li>
+                                
+                                    <li style="margin: 3px 0;">Add garlic, ginger, and chili, cooking for another 2-3 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">Stir in the ground spices (coriander, garam masala, turmeric) and cook for 30-60 seconds, stirring frequently to avoid burning.</li>
+                                
+                                    <li style="margin: 3px 0;">Pour in the tomatoes, lentils, and vegetable broth. Bring to a boil, then simmer for 20 minutes or until the lentils are fully cooked.</li>
+                                
+                                    <li style="margin: 3px 0;">Stir in the coconut cream, lime juice, and nut butter (if using). Season with salt and pepper to taste.</li>
+                                
+                                    <li style="margin: 3px 0;">Add fresh cilantro and cook for another minute.</li>
+                                
+                                    <li style="margin: 3px 0;">Serve the dal with rice, naan, vegan yogurt, or your preferred sides.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Harissa Chickpea Stew" data-category="Main Course">
+                        <div class="recipe-header">
+                            <h2>Harissa Chickpea Stew</h2>
+                            <div class="categories">Main Course</div>
+                        </div>
+                        <p><strong>Description:</strong> A warming and spicy chickpea stew with rich harissa and smoked paprika, topped with a tangy lemon-garlic yogurt drizzle and served with toasted sourdough. The perfect cozy meal for cold weather.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Harissa Chickpea Stew')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Harissa Chickpea Stew" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Chickpeas (tin)</span> <span class="quantity">1 can</span></li>
+                                
+                                    <li><span>Chopped tomatoes (tin)</span> <span class="quantity">1 can</span></li>
+                                
+                                    <li><span>Red onion (small)</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Garlic cloves</span> <span class="quantity">3</span></li>
+                                
+                                    <li><span>Harissa</span> <span class="quantity">15 g (3 tsp)</span></li>
+                                
+                                    <li><span>Smoked paprika</span> <span class="quantity">2.5 g (1 tsp)</span></li>
+                                
+                                    <li><span>Stock cube</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Lemon</span> <span class="quantity">1/2 (for drizzle)</span></li>
+                                
+                                    <li><span>Unsweetened dairy-free yoghurt</span> <span class="quantity">45 g (3 tbsp)</span></li>
+                                
+                                    <li><span>Garlic (for drizzle)</span> <span class="quantity">1 clove</span></li>
+                                
+                                    <li><span>Chopped parsley</span> <span class="quantity">optional</span></li>
+                                
+                                    <li><span>Chilli flakes</span> <span class="quantity">optional</span></li>
+                                
+                                    <li><span>Sourdough bread (for toasting)</span> <span class="quantity">optional</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">Finely slice the red onion and garlic. Heat a splash of oil in a pot, add the onion and garlic, and soften for 5 minutes over medium heat.</li>
+                                
+                                    <li style="margin: 3px 0;">Stir in the harissa and chickpeas, cooking for a couple of minutes to coat the chickpeas.</li>
+                                
+                                    <li style="margin: 3px 0;">Add the tin of chopped tomatoes and crumble in the stock cube (or mix in a mug with hot water and pour in).</li>
+                                
+                                    <li style="margin: 3px 0;">Bring the mixture to a simmer, then simmer for a further 10 minutes, stirring occasionally to reduce the liquid.</li>
+                                
+                                    <li style="margin: 3px 0;">For the drizzle, crush, grate, or finely chop the garlic. Add to a small bowl with the yoghurt, zest and juice of the lemon, and mix. Season to taste.</li>
+                                
+                                    <li style="margin: 3px 0;">Serve the stew in a bowl, drizzle with the yogurt mixture, and add any optional toppings like parsley, chili flakes, or toasted sourdough.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Buffalo Chickpea Stuffed Sweet Potato" data-category="Main Course, Oven">
+                        <div class="recipe-header">
+                            <h2>Buffalo Chickpea Stuffed Sweet Potato</h2>
+                            <div class="categories">Main Course, Oven</div>
+                        </div>
+                        <p><strong>Description:</strong> A delicious and spicy dish combining roasted sweet potatoes with buffalo chickpeas, offering a perfect blend of heat, sweetness, and savory flavors. Top with your favorite fixings for an irresistible meal.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Buffalo Chickpea Stuffed Sweet Potato')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Buffalo Chickpea Stuffed Sweet Potato" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Sweet potato (medium or large)</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Chickpeas (drained)</span> <span class="quantity">425 g (1 can)</span></li>
+                                
+                                    <li><span>Garlic powder</span> <span class="quantity">2.5 g (1/2 tsp)</span></li>
+                                
+                                    <li><span>Smoked paprika</span> <span class="quantity">2.5 g (1/2 tsp)</span></li>
+                                
+                                    <li><span>Cumin</span> <span class="quantity">2.5 g (1/2 tsp)</span></li>
+                                
+                                    <li><span>Salt</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Pepper</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Hot sauce</span> <span class="quantity">60 ml (1/4 cup)</span></li>
+                                
+                                    <li><span>Culinary vinegar (e.g., apple cider vinegar)</span> <span class="quantity">15 ml (1 tbsp)</span></li>
+                                
+                                    <li><span>Tahini or cashew butter</span> <span class="quantity">30 g (2 tbsp)</span></li>
+                                
+                                    <li><span>Maple syrup</span> <span class="quantity">2.5 g (1/2 tsp)</span></li>
+                                
+                                    <li><span>Soy sauce or aminos</span> <span class="quantity">15 ml (1 tbsp)</span></li>
+                                
+                                    <li><span>Ranch (optional)</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Cilantro (optional)</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Scallions (optional)</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Vegan yogurt (optional)</span> <span class="quantity">to taste</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">Preheat the oven to 200°C (400°F). Place the sweet potato halves face down on a sheet pan lined with parchment paper. Roast for 20 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">While the sweet potato is roasting, toss the chickpeas in garlic powder, smoked paprika, cumin, and a light coating of oil. After 20 minutes, add the chickpeas to the sheet pan with the sweet potato and roast for an additional 25 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">In a bowl, mix together all the buffalo sauce ingredients (hot sauce, vinegar, tahini/cashew butter, maple syrup, and soy sauce/aminos).</li>
+                                
+                                    <li style="margin: 3px 0;">Once the chickpeas are done roasting, toss them in the buffalo sauce until fully coated.</li>
+                                
+                                    <li style="margin: 3px 0;">Let the sweet potatoes cool for 5 minutes, then top them with the buffalo chickpeas. Add any optional toppings like ranch, cilantro, scallions, or vegan yogurt.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Baked Cauliflower Parmesan" data-category="Main Course, Oven, Italian">
+                        <div class="recipe-header">
+                            <h2>Baked Cauliflower Parmesan</h2>
+                            <div class="categories">Main Course, Oven, Italian</div>
+                        </div>
+                        <p><strong>Description:</strong> A healthier twist on classic Parmesan, featuring cauliflower coated in a flavorful breading, topped with tangy tomato sauce and melted mozzarella cheese.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Baked Cauliflower Parmesan')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Baked Cauliflower Parmesan" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Cauliflower (head)</span> <span class="quantity">560 g</span></li>
+                                
+                                    <li><span>Almond flour</span> <span class="quantity">80 g (2/3 cup)</span></li>
+                                
+                                    <li><span>Grated Parmesan</span> <span class="quantity">80 g (2/3 cup)</span></li>
+                                
+                                    <li><span>Italian seasoning</span> <span class="quantity">5 g (1 tbsp)</span></li>
+                                
+                                    <li><span>Garlic powder</span> <span class="quantity">1.5 g (1/2 tsp)</span></li>
+                                
+                                    <li><span>Black pepper</span> <span class="quantity">1 g (1/4 tsp)</span></li>
+                                
+                                    <li><span>Oregano</span> <span class="quantity">1 g (1 tbsp)</span></li>
+                                
+                                    <li><span>Paprika</span> <span class="quantity">2.5 g (1 tsp)</span></li>
+                                
+                                    <li><span>Salt</span> <span class="quantity">3.5 g (3/4 tsp)</span></li>
+                                
+                                    <li><span>Egg</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Tomato paste</span> <span class="quantity">30 g (2 tbsp)</span></li>
+                                
+                                    <li><span>Water</span> <span class="quantity">120 ml (1/2 cup)</span></li>
+                                
+                                    <li><span>Italian seasoning (for sauce)</span> <span class="quantity">0.5 g (1/2 tsp)</span></li>
+                                
+                                    <li><span>Salt (for sauce)</span> <span class="quantity">pinch</span></li>
+                                
+                                    <li><span>Pepper (for sauce)</span> <span class="quantity">pinch</span></li>
+                                
+                                    <li><span>Shredded mozzarella</span> <span class="quantity">120 g (1 cup)</span></li>
+                                
+                                    <li><span>Fresh parsley (optional)</span> <span class="quantity">to taste</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">Preheat the oven to 175°C (350°F).</li>
+                                
+                                    <li style="margin: 3px 0;">Cut the cauliflower into 2/3-inch slices and set them aside.</li>
+                                
+                                    <li style="margin: 3px 0;">In a flat plate, mix together almond flour, grated Parmesan, Italian seasoning, garlic powder, black pepper, oregano, paprika, and salt. Set aside.</li>
+                                
+                                    <li style="margin: 3px 0;">In another flat plate, whisk the egg with a pinch of salt and pepper. Dip the cauliflower slices into the egg on both sides, then transfer to the breading mixture, ensuring both sides are coated. Place the coated cauliflower on a baking sheet lined with parchment paper. Repeat until all slices are coated.</li>
+                                
+                                    <li style="margin: 3px 0;">Bake the cauliflower for 15 minutes. While baking, mix together the sauce ingredients: tomato paste, water, Italian seasoning, salt, and pepper.</li>
+                                
+                                    <li style="margin: 3px 0;">After 15 minutes, remove the cauliflower from the oven and add the sauce and mozzarella cheese on top. Return to the oven and bake for another 15 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">Top the cauliflower parmesan with fresh parsley, serve, and enjoy!</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Rice Paper Dumplings" data-category="Appetizer, Snacks">
+                        <div class="recipe-header">
+                            <h2>Rice Paper Dumplings</h2>
+                            <div class="categories">Appetizer, Snacks</div>
+                        </div>
+                        <p><strong>Description:</strong> These crispy rice paper dumplings are packed with delicious flavors and are perfect for dipping!</p>
+                        <button class="expand-button" onclick="toggleRecipe('Rice Paper Dumplings')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Rice Paper Dumplings" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Garlic</span> <span class="quantity">4 cloves, minced</span></li>
+                                
+                                    <li><span>Carrots</span> <span class="quantity">2, grated</span></li>
+                                
+                                    <li><span>Tofu</span> <span class="quantity">1 block, grated</span></li>
+                                
+                                    <li><span>Medium cabbage</span> <span class="quantity">1/4, chopped</span></li>
+                                
+                                    <li><span>Mushrooms</span> <span class="quantity">250 g, diced</span></li>
+                                
+                                    <li><span>Parsley</span> <span class="quantity">1 bunch, chopped</span></li>
+                                
+                                    <li><span>Soy sauce</span> <span class="quantity">1/4 cup (use gluten-free if needed)</span></li>
+                                
+                                    <li><span>Black pepper</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Rice paper sheets</span> <span class="quantity">20 sheets</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">Add garlic to a pan with oil, then add tofu and fry for about 3 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">Add the rest of the vegetables and fry for 5 more minutes. Season with soy sauce and continue frying until softened. Remove from heat.</li>
+                                
+                                    <li style="margin: 3px 0;">To make the dumplings: Dip each rice paper sheet in cold water for 10 seconds and place it on a wooden board.</li>
+                                
+                                    <li style="margin: 3px 0;">Add about 1/4 cup of the mixture to the center of the rice paper. Fold the sides, then the bottom, and finish with the top to seal the dumpling.</li>
+                                
+                                    <li style="margin: 3px 0;">Wrap each dumpling with a second layer of rice paper as you did with the first.</li>
+                                
+                                    <li style="margin: 3px 0;">Once all dumplings are wrapped, heat oil in a large pan and fry the dumplings on both sides until golden and crispy.</li>
+                                
+                                    <li style="margin: 3px 0;">For the dipping sauce, mix all the sauce ingredients together. Serve the dumplings with the sauce and enjoy!</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Eggplant Tacos" data-category="Main Course, Mexican">
+                        <div class="recipe-header">
+                            <h2>Eggplant Tacos</h2>
+                            <div class="categories">Main Course, Mexican</div>
+                        </div>
+                        <p><strong>Description:</strong> A great meat substitute, these eggplant tacos are full of flavor and easy to make.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Eggplant Tacos')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Eggplant Tacos" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Eggplants</span> <span class="quantity">3</span></li>
+                                
+                                    <li><span>Cumin</span> <span class="quantity">1 tsp</span></li>
+                                
+                                    <li><span>Paprika</span> <span class="quantity">1 tsp</span></li>
+                                
+                                    <li><span>Salt</span> <span class="quantity">1 tsp</span></li>
+                                
+                                    <li><span>Garlic powder</span> <span class="quantity">1/2 tsp</span></li>
+                                
+                                    <li><span>Chili powder</span> <span class="quantity">1/2 tsp</span></li>
+                                
+                                    <li><span>BBQ sauce</span> <span class="quantity">3-4 tbsp</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">ROAST eggplants at 200°C/400°F for 20 minutes or until the skin starts to look wrinkled.</li>
+                                
+                                    <li style="margin: 3px 0;">Place roasted eggplants in a bowl, cover for 5 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">Peel the eggplants and tear into strips.</li>
+                                
+                                    <li style="margin: 3px 0;">Mix cumin, paprika, salt, garlic powder, and chili powder. Toss with the eggplant.</li>
+                                
+                                    <li style="margin: 3px 0;">BAKE at 200°C/400°F for 20 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">Combine with BBQ sauce and serve as taco filling.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Al Pastor Style Cauliflower" data-category="Main Course, Oven">
+                        <div class="recipe-header">
+                            <h2>Al Pastor Style Cauliflower</h2>
+                            <div class="categories">Main Course, Oven</div>
+                        </div>
+                        <p><strong>Description:</strong> A delicious, spicy cauliflower dish with a tangy pineapple sauce. Perfect as a vegetarian taco filling or side dish.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Al Pastor Style Cauliflower')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Al Pastor Style Cauliflower" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Cauliflower</span> <span class="quantity">1 large</span></li>
+                                
+                                    <li><span>Onion</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Garlic cloves</span> <span class="quantity">4</span></li>
+                                
+                                    <li><span>Red chilis</span> <span class="quantity">4</span></li>
+                                
+                                    <li><span>Pineapple juice</span> <span class="quantity">60 ml (1/4 cup)</span></li>
+                                
+                                    <li><span>White wine vinegar</span> <span class="quantity">2 tbsp</span></li>
+                                
+                                    <li><span>Oil</span> <span class="quantity">3 tbsp</span></li>
+                                
+                                    <li><span>Cumin</span> <span class="quantity">1 tsp</span></li>
+                                
+                                    <li><span>Paprika</span> <span class="quantity">2 tsp</span></li>
+                                
+                                    <li><span>Salt</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Pepper</span> <span class="quantity">to taste</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">BOIL cauliflower in salted water for 5-10 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">Remove cauliflower and let it steam fry for 10 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">For the sauce: Toast onion, garlic, and red chilis in a pan for 5-10 minutes until softened.</li>
+                                
+                                    <li style="margin: 3px 0;">Blend the sautéed vegetables with pineapple juice, white wine vinegar, oil, cumin, paprika, salt, and pepper.</li>
+                                
+                                    <li style="margin: 3px 0;">Cover the cauliflower with the sauce mixture.</li>
+                                
+                                    <li style="margin: 3px 0;">BAKE at 225°C/450°F for 45 minutes.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Stuffed Bell Peppers with Feta" data-category="Main Course, Oven">
+                        <div class="recipe-header">
+                            <h2>Stuffed Bell Peppers with Feta</h2>
+                            <div class="categories">Main Course, Oven</div>
+                        </div>
+                        <p><strong>Description:</strong> A delicious vegetarian dish with roasted bell peppers filled with feta cheese and crispy breadcrumbs. Serve with a squeeze of lime for extra flavor.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Stuffed Bell Peppers with Feta')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Stuffed Bell Peppers with Feta" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Bell peppers</span> <span class="quantity">3</span></li>
+                                
+                                    <li><span>Whole wheat flour</span> <span class="quantity">1 cup</span></li>
+                                
+                                    <li><span>Panko breadcrumbs</span> <span class="quantity">1 cup</span></li>
+                                
+                                    <li><span>Eggs</span> <span class="quantity">2</span></li>
+                                
+                                    <li><span>Feta cheese</span> <span class="quantity">1/2 block</span></li>
+                                
+                                    <li><span>Salt</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Pepper</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Lime</span> <span class="quantity">1/2</span></li>
+                                
+                                    <li><span>Olive oil</span> <span class="quantity">for frying</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">CUT the bell peppers in half, remove seeds, and bake in the oven at 250°C (482°F) for 15 minutes, until the skin blackens and the peppers are soft.</li>
+                                
+                                    <li style="margin: 3px 0;">PEEL the bell peppers and place a small piece of feta cheese in each half. Optionally secure with a toothpick.</li>
+                                
+                                    <li style="margin: 3px 0;">WHISK the eggs and season with salt and pepper.</li>
+                                
+                                    <li style="margin: 3px 0;">DIP the pepper-feta halves into the flour, then the egg, and finally coat in panko breadcrumbs.</li>
+                                
+                                    <li style="margin: 3px 0;">FRY in a pan with plenty of olive oil and serve with lime.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Chinese Cucumber Salad" data-category="Side Dish, Salad">
+                        <div class="recipe-header">
+                            <h2>Chinese Cucumber Salad</h2>
+                            <div class="categories">Side Dish, Salad</div>
+                        </div>
+                        <p><strong>Description:</strong> A fresh, tangy, and flavorful childhood favorite with cucumbers marinated in a savory and slightly sweet sauce, topped with chili oil and sesame seeds.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Chinese Cucumber Salad')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Chinese Cucumber Salad" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Cucumbers</span> <span class="quantity">2 large or 3 medium</span></li>
+                                
+                                    <li><span>Sea salt</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Black vinegar</span> <span class="quantity">1.5 tbsp</span></li>
+                                
+                                    <li><span>Soy sauce</span> <span class="quantity">1 tbsp</span></li>
+                                
+                                    <li><span>Sesame oil</span> <span class="quantity">1 tsp</span></li>
+                                
+                                    <li><span>Liquid sweetener or sugar</span> <span class="quantity">2 tsp</span></li>
+                                
+                                    <li><span>Garlic</span> <span class="quantity">2 cloves, minced</span></li>
+                                
+                                    <li><span>Chili oil</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Sesame seeds</span> <span class="quantity">for garnish</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">WASH the cucumbers, slice off the ends, and slice at an angle using wooden chopsticks.</li>
+                                
+                                    <li style="margin: 3px 0;">PLACE cucumbers in a bowl, sprinkle with salt to draw out moisture, set aside for 5 minutes, then rinse and drain. Alternatively, skip this step and marinate the cucumber directly in the sauce.</li>
+                                
+                                    <li style="margin: 3px 0;">IN A BOWL, mix black vinegar, soy sauce, sesame oil, sweetener, garlic, and chili oil.</li>
+                                
+                                    <li style="margin: 3px 0;">MIX cucumbers with the sauce until well-coated.</li>
+                                
+                                    <li style="margin: 3px 0;">TRANSFER to a plate, spoon sauce on top, and garnish with sesame seeds and extra chili oil.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Braised Cabbage" data-category="Main Course">
+                        <div class="recipe-header">
+                            <h2>Braised Cabbage</h2>
+                            <div class="categories">Main Course</div>
+                        </div>
+                        <p><strong>Description:</strong> A flavorful braised cabbage dish with a sweet and savory braising liquid, topped with a creamy tahini sauce.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Braised Cabbage')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Braised Cabbage" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Pointed cabbage or Napa cabbage</span> <span class="quantity">1, cut into quarters</span></li>
+                                
+                                    <li><span>Oil</span> <span class="quantity">for frying</span></li>
+                                
+                                    <li><span>Orange juice</span> <span class="quantity">1/2 cup (125ml)</span></li>
+                                
+                                    <li><span>Water</span> <span class="quantity">1/3 cup (80ml)</span></li>
+                                
+                                    <li><span>Maple syrup</span> <span class="quantity">1 Tbsp</span></li>
+                                
+                                    <li><span>Salt</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Ground cumin</span> <span class="quantity">1 tsp</span></li>
+                                
+                                    <li><span>Ground coriander</span> <span class="quantity">1 tsp</span></li>
+                                
+                                    <li><span>Paprika</span> <span class="quantity">1 tsp</span></li>
+                                
+                                    <li><span>Chili flakes</span> <span class="quantity">optional</span></li>
+                                
+                                    <li><span>Tahini</span> <span class="quantity">4 Tbsp</span></li>
+                                
+                                    <li><span>Maple syrup (for sauce)</span> <span class="quantity">1 Tbsp</span></li>
+                                
+                                    <li><span>Lemon juice</span> <span class="quantity">1 Tbsp</span></li>
+                                
+                                    <li><span>Sriracha</span> <span class="quantity">1 tsp</span></li>
+                                
+                                    <li><span>Salt (for sauce)</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Water (for thinning sauce)</span> <span class="quantity">as needed</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">CUT cabbage into quarters and fry each side in oil until charred.</li>
+                                
+                                    <li style="margin: 3px 0;">MIX the braising liquid ingredients and add to the pan with cabbage.</li>
+                                
+                                    <li style="margin: 3px 0;">COOK for 10 minutes until the broth has evaporated.</li>
+                                
+                                    <li style="margin: 3px 0;">MIX tahini sauce ingredients and thin with water as needed.</li>
+                                
+                                    <li style="margin: 3px 0;">SERVE tahini sauce over the braised cabbage.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Roasted Eggplant with Harissa-Tahini Sauce" data-category="Main Course">
+                        <div class="recipe-header">
+                            <h2>Roasted Eggplant with Harissa-Tahini Sauce</h2>
+                            <div class="categories">Main Course</div>
+                        </div>
+                        <p><strong>Description:</strong> Double-roasting the eggplant creates a custardy texture with caramelized edges, paired with a flavorful harissa-tahini sauce and garnished with roasted cashews and fresh herbs.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Roasted Eggplant with Harissa-Tahini Sauce')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Roasted Eggplant with Harissa-Tahini Sauce" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Globe eggplants</span> <span class="quantity">as needed</span></li>
+                                
+                                    <li><span>Extra-virgin olive oil</span> <span class="quantity">for roasting</span></li>
+                                
+                                    <li><span>Lower-sodium soy sauce or tamari</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Mild harissa</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Maple syrup</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Kosher salt</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Chopped roasted cashews</span> <span class="quantity">for garnish</span></li>
+                                
+                                    <li><span>Fresh herbs (parsley or mint)</span> <span class="quantity">for garnish</span></li>
+                                
+                                    <li><span>Tahini</span> <span class="quantity">for sauce</span></li>
+                                
+                                    <li><span>Fresh lemon juice</span> <span class="quantity">for sauce</span></li>
+                                
+                                    <li><span>Fresh garlic</span> <span class="quantity">for sauce</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">PREHEAT oven to 400°F (200°C).</li>
+                                
+                                    <li style="margin: 3px 0;">SLICE eggplants in half lengthwise and score the flesh.</li>
+                                
+                                    <li style="margin: 3px 0;">BRUSH with olive oil and season with salt. Roast for 30-40 minutes until golden and caramelized.</li>
+                                
+                                    <li style="margin: 3px 0;">PREPARE sauce by combining tahini, lemon juice, garlic, soy sauce, harissa, maple syrup, and a pinch of salt. Adjust consistency with water if needed.</li>
+                                
+                                    <li style="margin: 3px 0;">REMOVE eggplant from the oven, drizzle with sauce, and garnish with chopped roasted cashews and fresh herbs.</li>
+                                
+                                    <li style="margin: 3px 0;">SERVE and enjoy!</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Tiger Skin Eggs" data-category="Side Dish">
+                        <div class="recipe-header">
+                            <h2>Tiger Skin Eggs</h2>
+                            <div class="categories">Side Dish</div>
+                        </div>
+                        <p><strong>Description:</strong> A savory and spicy Chinese dish where hard-boiled eggs are fried to form a crispy skin, which soaks up a delicious sauce made with soy sauce, mirin, gochujang, and beer.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Tiger Skin Eggs')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Tiger Skin Eggs" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Hard-boiled eggs</span> <span class="quantity">6-8 eggs</span></li>
+                                
+                                    <li><span>Soy sauce</span> <span class="quantity">1/2 cup</span></li>
+                                
+                                    <li><span>Mirin</span> <span class="quantity">1/3 cup</span></li>
+                                
+                                    <li><span>Rice vinegar</span> <span class="quantity">1/3 cup</span></li>
+                                
+                                    <li><span>Gochujang (Korean chili paste)</span> <span class="quantity">1 1/2 tbsp</span></li>
+                                
+                                    <li><span>Diced Thai chilis</span> <span class="quantity">4 chilis</span></li>
+                                
+                                    <li><span>Diced garlic cloves</span> <span class="quantity">4 cloves</span></li>
+                                
+                                    <li><span>Beer</span> <span class="quantity">1 full can</span></li>
+                                
+                                    <li><span>Sugar</span> <span class="quantity">2 tbsp</span></li>
+                                
+                                    <li><span>Salt</span> <span class="quantity">to taste</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">PEEL the hard-boiled eggs and set aside.</li>
+                                
+                                    <li style="margin: 3px 0;">HEAT a little oil in a pan and fry the eggs until the skin becomes crispy.</li>
+                                
+                                    <li style="margin: 3px 0;">IN a separate pan, combine soy sauce, mirin, rice vinegar, gochujang, diced Thai chilis, garlic, beer, sugar, and salt. Bring to a simmer and cook for 5-7 minutes to blend the flavors.</li>
+                                
+                                    <li style="margin: 3px 0;">ADD the fried eggs to the sauce and cook for another 5-10 minutes, occasionally turning the eggs so they absorb the sauce.</li>
+                                
+                                    <li style="margin: 3px 0;">SERVE hot with the eggs fully coated in the sauce.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Meaty Mushroom Pie" data-category="Main Course, Oven">
+                        <div class="recipe-header">
+                            <h2>Meaty Mushroom Pie</h2>
+                            <div class="categories">Main Course, Oven</div>
+                        </div>
+                        <p><strong>Description:</strong> A rich, savory vegan pie inspired by steak and Guinness pie, with a mix of mushrooms, red wine, and a flaky puff pastry crust.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Meaty Mushroom Pie')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Meaty Mushroom Pie" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Olive oil</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Red onion</span> <span class="quantity">1, peeled and chopped</span></li>
+                                
+                                    <li><span>Garlic cloves</span> <span class="quantity">4, peeled and finely chopped</span></li>
+                                
+                                    <li><span>Carrots</span> <span class="quantity">2, chopped</span></li>
+                                
+                                    <li><span>Celery sticks</span> <span class="quantity">2, chopped</span></li>
+                                
+                                    <li><span>Mixed mushrooms</span> <span class="quantity">500g (17.6oz), roughly sliced</span></li>
+                                
+                                    <li><span>Vegan-friendly red wine</span> <span class="quantity">250ml (1 cup)</span></li>
+                                
+                                    <li><span>Fresh rosemary</span> <span class="quantity">3 sprigs, chopped</span></li>
+                                
+                                    <li><span>Soy sauce</span> <span class="quantity">2 tbsp</span></li>
+                                
+                                    <li><span>Vegetable stock</span> <span class="quantity">250ml (1 cup)</span></li>
+                                
+                                    <li><span>Plain flour</span> <span class="quantity">3 tbsp, plus extra for dusting</span></li>
+                                
+                                    <li><span>Salt</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Pepper</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Vegan cheddar cheese</span> <span class="quantity">100g (3.5oz), grated</span></li>
+                                
+                                    <li><span>Vegan-friendly puff pastry</span> <span class="quantity">500g (17.6oz) block</span></li>
+                                
+                                    <li><span>Plant-based milk</span> <span class="quantity">for brushing</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">HEAT olive oil in a pan, then fry red onion, garlic, carrots, and celery for 5 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">ADD mushrooms and cook until they shrink in size and release moisture.</li>
+                                
+                                    <li style="margin: 3px 0;">TURN heat up and cook red wine until most of the liquid evaporates.</li>
+                                
+                                    <li style="margin: 3px 0;">REDUCE heat to medium, then add rosemary, soy sauce, vegetable stock, and flour. Cook until the mixture thickens into a gravy-like consistency.</li>
+                                
+                                    <li style="margin: 3px 0;">SEASON with salt and pepper, remove from heat, and stir in grated vegan cheddar cheese.</li>
+                                
+                                    <li style="margin: 3px 0;">ALLOW the filling to cool for 20-30 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">PREHEAT the oven to 200°C fan / 425°F.</li>
+                                
+                                    <li style="margin: 3px 0;">ROLL out 1/3 of the puff pastry and line a baking dish. Dust with flour to prevent a soggy bottom.</li>
+                                
+                                    <li style="margin: 3px 0;">ADD the cooled filling, then brush the pastry edges with plant-based milk.</li>
+                                
+                                    <li style="margin: 3px 0;">ROLL out the remaining pastry and cover the pie. Seal the edges, brush the top with milk.</li>
+                                
+                                    <li style="margin: 3px 0;">BAKE for 35-45 minutes, or until golden brown all over.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Baked Eggplant with Cheese and Tomatoes" data-category="Main Course, Italian">
+                        <div class="recipe-header">
+                            <h2>Baked Eggplant with Cheese and Tomatoes</h2>
+                            <div class="categories">Main Course, Italian</div>
+                        </div>
+                        <p><strong>Description:</strong> A deliciously baked eggplant with layers of vegan mozzarella, fresh tomato sauce, and Italian herbs, perfect as a side or standalone dish.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Baked Eggplant with Cheese and Tomatoes')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Baked Eggplant with Cheese and Tomatoes" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Large eggplant</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Fresh tomatoes</span> <span class="quantity">2, medium, sliced</span></li>
+                                
+                                    <li><span>Vegan mozzarella cheese</span> <span class="quantity">250g, sliced</span></li>
+                                
+                                    <li><span>Grated tomatoes</span> <span class="quantity">200g</span></li>
+                                
+                                    <li><span>Garlic cloves</span> <span class="quantity">4, minced</span></li>
+                                
+                                    <li><span>Dried Italian herbs</span> <span class="quantity">1/2 tsp</span></li>
+                                
+                                    <li><span>Fresh basil leaves</span> <span class="quantity">5-6, chopped</span></li>
+                                
+                                    <li><span>Sugar</span> <span class="quantity">1.5 tsp</span></li>
+                                
+                                    <li><span>Salt</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Black pepper</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Olive or vegetable oil</span> <span class="quantity">1 tbsp</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">PREHEAT the oven to 180°C and line a baking tray with baking paper.</li>
+                                
+                                    <li style="margin: 3px 0;">CUT the eggplant lengthwise, leaving the stalk intact, and press gently to open.</li>
+                                
+                                    <li style="margin: 3px 0;">SEASON the eggplant with salt and let rest for 20 minutes, then pat dry with paper towels.</li>
+                                
+                                    <li style="margin: 3px 0;">HEAT olive oil in a pan, then add pureed tomatoes, garlic, sugar, salt, pepper, Italian herbs, and basil. Simmer until the sauce thickens.</li>
+                                
+                                    <li style="margin: 3px 0;">SLICE the tomatoes and vegan mozzarella thinly.</li>
+                                
+                                    <li style="margin: 3px 0;">BRUSH each eggplant slice with tomato sauce and layer with tomato and cheese slices.</li>
+                                
+                                    <li style="margin: 3px 0;">BAKE in the preheated oven for 40-50 minutes until toasted and soft.</li>
+                                
+                                    <li style="margin: 3px 0;">GARNISH with fresh basil or parsley leaves and serve immediately or store for later.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Creamy Jalapeño Potato Soup / Dip" data-category="Soup, Dip">
+                        <div class="recipe-header">
+                            <h2>Creamy Jalapeño Potato Soup / Dip</h2>
+                            <div class="categories">Soup, Dip</div>
+                        </div>
+                        <p><strong>Description:</strong> A creamy, spicy potato soup or dip made without any pots or pans. The potato and roasted vegetables combine for a rich, flavorful texture.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Creamy Jalapeño Potato Soup / Dip')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Creamy Jalapeño Potato Soup / Dip" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Russet potato</span> <span class="quantity">1 large</span></li>
+                                
+                                    <li><span>Jalapeño</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Onion</span> <span class="quantity">1/2</span></li>
+                                
+                                    <li><span>Garlic clove</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Onion powder</span> <span class="quantity">1 teaspoon</span></li>
+                                
+                                    <li><span>Garlic powder</span> <span class="quantity">1 teaspoon</span></li>
+                                
+                                    <li><span>Fresh cilantro</span> <span class="quantity">1 tablespoon (optional)</span></li>
+                                
+                                    <li><span>Smoked paprika</span> <span class="quantity">1/4 teaspoon</span></li>
+                                
+                                    <li><span>Milk or cream</span> <span class="quantity">1/4 cup</span></li>
+                                
+                                    <li><span>Chicken broth</span> <span class="quantity">1/4 cup</span></li>
+                                
+                                    <li><span>Cheddar cheese</span> <span class="quantity">Handful (to blend in or top)</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">BAKE potato in the microwave for 4 minutes until soft.</li>
+                                
+                                    <li style="margin: 3px 0;">ROAST jalapeño, half of onion, and garlic at 400°F until lightly charred.</li>
+                                
+                                    <li style="margin: 3px 0;">ADD baked potato, roasted vegetables, milk, broth, and seasonings to a blender.</li>
+                                
+                                    <li style="margin: 3px 0;">BLEND until smooth (less liquid for dip).</li>
+                                
+                                    <li style="margin: 3px 0;">GARNISH with cheddar cheese, bacon bits, jalapeño, and sour cream.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Hungarian Mushroom Soup" data-category="Soup">
+                        <div class="recipe-header">
+                            <h2>Hungarian Mushroom Soup</h2>
+                            <div class="categories">Soup</div>
+                        </div>
+                        <p><strong>Description:</strong> A creamy and savory Hungarian mushroom soup, rich with the flavors of paprika, dill, and sour cream. Perfect for winter!</p>
+                        <button class="expand-button" onclick="toggleRecipe('Hungarian Mushroom Soup')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Hungarian Mushroom Soup" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Salted butter</span> <span class="quantity">4 tablespoons</span></li>
+                                
+                                    <li><span>White onions</span> <span class="quantity">1 ½ cups, chopped</span></li>
+                                
+                                    <li><span>Mushrooms (crimini, button, etc.)</span> <span class="quantity">1 lb, sliced</span></li>
+                                
+                                    <li><span>Dried dill weed</span> <span class="quantity">2 teaspoons</span></li>
+                                
+                                    <li><span>Dried thyme</span> <span class="quantity">1 teaspoon</span></li>
+                                
+                                    <li><span>Sweet paprika</span> <span class="quantity">1 tablespoon</span></li>
+                                
+                                    <li><span>Lemon juice</span> <span class="quantity">1 tablespoon</span></li>
+                                
+                                    <li><span>Garlic cloves</span> <span class="quantity">2, grated</span></li>
+                                
+                                    <li><span>Broth</span> <span class="quantity">2 ½ cups (vegetable or chicken)</span></li>
+                                
+                                    <li><span>Soy sauce</span> <span class="quantity">2 tablespoons</span></li>
+                                
+                                    <li><span>All-purpose flour</span> <span class="quantity">3 tablespoons</span></li>
+                                
+                                    <li><span>Half and half or milk</span> <span class="quantity">1 cup</span></li>
+                                
+                                    <li><span>Sour cream or crème fraiche</span> <span class="quantity">1/3 cup</span></li>
+                                
+                                    <li><span>Chopped parsley</span> <span class="quantity">3 tablespoons</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">MELT butter in a soup pot. Sauté the onions for a few minutes, then add mushrooms. Cook for 8-10 minutes on medium heat.</li>
+                                
+                                    <li style="margin: 3px 0;">ADD dill, thyme, paprika, garlic, and lemon juice. Cook for 2 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">ADD broth and soy sauce. Simmer on low to medium heat for a few minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">MIX half and half with flour in a bowl, removing lumps. Stir into the soup and simmer until thickened, do not boil.</li>
+                                
+                                    <li style="margin: 3px 0;">STIR in sour cream or crème fraiche.</li>
+                                
+                                    <li style="margin: 3px 0;">GARNISH with parsley and serve with warm bread and wine.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Pizza Dough" data-category="Main Course, Italian">
+                        <div class="recipe-header">
+                            <h2>Pizza Dough</h2>
+                            <div class="categories">Main Course, Italian</div>
+                        </div>
+                        <p><strong>Description:</strong> A versatile and fluffy pizza dough perfect for homemade pizzas with a light, chewy crust.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Pizza Dough')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Pizza Dough" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Flour</span> <span class="quantity">500 g</span></li>
+                                
+                                    <li><span>Salt</span> <span class="quantity">1 teaspoon</span></li>
+                                
+                                    <li><span>Margarine</span> <span class="quantity">80 g</span></li>
+                                
+                                    <li><span>Yeast (cube/pack)</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Sugar</span> <span class="quantity">Some</span></li>
+                                
+                                    <li><span>Warm Milk</span> <span class="quantity">250 ml</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">Mix the flour and salt in a large bowl.</li>
+                                
+                                    <li style="margin: 3px 0;">Create a small pit in the middle of the flour (large enough to hold the milk and yeast).</li>
+                                
+                                    <li style="margin: 3px 0;">Cut the margarine into small pieces (1-2 cm) and scatter them around the pit, ensuring none fall inside.</li>
+                                
+                                    <li style="margin: 3px 0;">Place the yeast into the pit. If using a cube, break it into small pieces.</li>
+                                
+                                    <li style="margin: 3px 0;">Cover the yeast with a thin layer of sugar.</li>
+                                
+                                    <li style="margin: 3px 0;">Gently pour the warm milk over the yeast. (Important: Ensure the milk is not too hot!)</li>
+                                
+                                    <li style="margin: 3px 0;">Cover the bowl and let the dough rest in a warm, draft-free place.</li>
+                                
+                                    <li style="margin: 3px 0;">Allow the mixture to sit until the center rises.</li>
+                                
+                                    <li style="margin: 3px 0;">Mix everything using a dough hook until it forms a smooth dough.</li>
+                                
+                                    <li style="margin: 3px 0;">Knead the dough by hand until elastic.</li>
+                                
+                                    <li style="margin: 3px 0;">Let the dough sit and rise again.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Spinach Pie" data-category="Main Course, Oven">
+                        <div class="recipe-header">
+                            <h2>Spinach Pie</h2>
+                            <div class="categories">Main Course, Oven</div>
+                        </div>
+                        <p><strong>Description:</strong> A savory Mediterranean-inspired pie filled with rich spinach, feta, and mozzarella, wrapped in flaky pastry leaves. Perfect for a hearty and flavorful meal.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Spinach Pie')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Spinach Pie" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Spinach</span> <span class="quantity">1000 g</span></li>
+                                
+                                    <li><span>Feta</span> <span class="quantity">1 block</span></li>
+                                
+                                    <li><span>Mozzarella</span> <span class="quantity">1 ball</span></li>
+                                
+                                    <li><span>Pastry leaves</span> <span class="quantity"></span></li>
+                                
+                                    <li><span>Olive oil</span> <span class="quantity"></span></li>
+                                
+                                    <li><span>Butter</span> <span class="quantity"></span></li>
+                                
+                                    <li><span>Garlic</span> <span class="quantity"></span></li>
+                                
+                                    <li><span>Eggs</span> <span class="quantity">3</span></li>
+                                
+                                    <li><span>Greek yoghurt</span> <span class="quantity"></span></li>
+                                
+                                    <li><span>Ham or minced meat (optional)</span> <span class="quantity"></span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">Chop the garlic and heat olive oil in a pan.</li>
+                                
+                                    <li style="margin: 3px 0;">Add the garlic and spinach, cooking the spinach in batches until wilted.</li>
+                                
+                                    <li style="margin: 3px 0;">Meanwhile, butter the oven mold and line it with pastry leaves.</li>
+                                
+                                    <li style="margin: 3px 0;">Once the spinach is cooked, drain the excess water and remove it from the stove.</li>
+                                
+                                    <li style="margin: 3px 0;">Cut the mozzarella and feta into small pieces. Mix half of both cheeses with the spinach.</li>
+                                
+                                    <li style="margin: 3px 0;">Place the spinach mixture into the mold over the pastry leaves.</li>
+                                
+                                    <li style="margin: 3px 0;">Whisk the eggs and Greek yogurt together, then pour the mixture over the spinach, spreading it evenly.</li>
+                                
+                                    <li style="margin: 3px 0;">Close the pie with additional pastry leaves and sprinkle the remaining mozzarella and feta on top.</li>
+                                
+                                    <li style="margin: 3px 0;">Bake in the oven for about 25 minutes at 200°C (392°F) until golden and crispy.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Chickpea Pumpkin Curry" data-category="Main Course, Curry">
+                        <div class="recipe-header">
+                            <h2>Chickpea Pumpkin Curry</h2>
+                            <div class="categories">Main Course, Curry</div>
+                        </div>
+                        <p><strong>Description:</strong> A creamy and comforting curry made with pumpkin, chickpeas, and a rich blend of Thai red curry paste, tamari, and almond butter. An easy-to-make dish that can be enjoyed with or without oil.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Chickpea Pumpkin Curry')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Chickpea Pumpkin Curry" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Olive oil or vegetable broth</span> <span class="quantity">15 ml (1 tbsp)</span></li>
+                                
+                                    <li><span>Shallot (small dice)</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Grated ginger</span> <span class="quantity">10 g (2 tsp)</span></li>
+                                
+                                    <li><span>Thai red curry paste</span> <span class="quantity">30 g (2 tbsp)</span></li>
+                                
+                                    <li><span>Pumpkin puree</span> <span class="quantity">425 g (1 can, 15 oz)</span></li>
+                                
+                                    <li><span>Vegetable broth</span> <span class="quantity">240 ml (1 cup)</span></li>
+                                
+                                    <li><span>Oat milk (or unsweetened coconut/nondairy milk)</span> <span class="quantity">295 ml (1 ¼ cups)</span></li>
+                                
+                                    <li><span>Tamari or soy sauce</span> <span class="quantity">15 ml (1 tbsp)</span></li>
+                                
+                                    <li><span>Fresh lime juice</span> <span class="quantity">15 ml (1 tbsp)</span></li>
+                                
+                                    <li><span>Almond, peanut, or cashew butter</span> <span class="quantity">30 g (2 tbsp)</span></li>
+                                
+                                    <li><span>Chickpeas (drained and rinsed, or cooked)</span> <span class="quantity">425 g (1 can, 15 oz)</span></li>
+                                
+                                    <li><span>Salt</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Chopped cilantro (for garnish)</span> <span class="quantity">3 tbsp (optional)</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">Heat the oil or vegetable broth in a medium saucepan over medium-high heat. Cook the shallot for about 3 minutes, or until translucent.</li>
+                                
+                                    <li style="margin: 3px 0;">Add the grated ginger and Thai red curry paste. Cook for one more minute, stirring constantly.</li>
+                                
+                                    <li style="margin: 3px 0;">Add the pumpkin puree, vegetable broth, oat milk, tamari, and lime juice. Bring the mixture to a boil, then reduce the heat and simmer uncovered for 10 minutes, stirring frequently.</li>
+                                
+                                    <li style="margin: 3px 0;">Stir in the almond butter until fully dissolved into the curry. Add the chickpeas and cook for another 5 minutes over medium heat, stirring frequently. Add more broth if needed to reach the desired consistency.</li>
+                                
+                                    <li style="margin: 3px 0;">Adjust lime juice and season with salt to taste. Garnish with cilantro (if using).</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Whole Roasted Sunset Cauliflower" data-category="Main Course, Oven">
+                        <div class="recipe-header">
+                            <h2>Whole Roasted Sunset Cauliflower</h2>
+                            <div class="categories">Main Course, Oven</div>
+                        </div>
+                        <p><strong>Description:</strong> A beautiful and delicious centerpiece for any dinner party. Roasted cauliflower with chickpeas, harissa tahini sauce, and crunchy garnishes.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Whole Roasted Sunset Cauliflower')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Whole Roasted Sunset Cauliflower" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Cauliflower</span> <span class="quantity">1 head</span></li>
+                                
+                                    <li><span>Cooked chickpeas</span> <span class="quantity">400g tin</span></li>
+                                
+                                    <li><span>Olive oil</span> <span class="quantity">7 tbsp (for marinade)</span></li>
+                                
+                                    <li><span>Garlic powder</span> <span class="quantity">2 tsp</span></li>
+                                
+                                    <li><span>Smoked paprika</span> <span class="quantity">3 tsp (for marinade)</span></li>
+                                
+                                    <li><span>Thyme</span> <span class="quantity">1.5 tsp</span></li>
+                                
+                                    <li><span>Oregano</span> <span class="quantity">1.5 tsp</span></li>
+                                
+                                    <li><span>Salt</span> <span class="quantity">1/2 tsp (for marinade)</span></li>
+                                
+                                    <li><span>Black pepper</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Olive oil</span> <span class="quantity">1 tbsp (for chickpeas)</span></li>
+                                
+                                    <li><span>Cumin</span> <span class="quantity">1/2 tsp</span></li>
+                                
+                                    <li><span>Coriander</span> <span class="quantity">1/2 tsp</span></li>
+                                
+                                    <li><span>Chili powder</span> <span class="quantity">pinch</span></li>
+                                
+                                    <li><span>Salt</span> <span class="quantity">to taste (for chickpeas)</span></li>
+                                
+                                    <li><span>Tahini</span> <span class="quantity">100ml (for sauce)</span></li>
+                                
+                                    <li><span>Lemon juice</span> <span class="quantity">2 tbsp</span></li>
+                                
+                                    <li><span>Harissa paste</span> <span class="quantity">2 heaping tsp</span></li>
+                                
+                                    <li><span>Smoked paprika</span> <span class="quantity">1 tsp (for sauce)</span></li>
+                                
+                                    <li><span>Salt</span> <span class="quantity">pinch (for sauce)</span></li>
+                                
+                                    <li><span>Water</span> <span class="quantity">50ml (for sauce, more if needed)</span></li>
+                                
+                                    <li><span>Red pepper</span> <span class="quantity">for optional sauce color (blended with sauce)</span></li>
+                                
+                                    <li><span>Cooked beetroot</span> <span class="quantity">for optional sauce color (blended with sauce)</span></li>
+                                
+                                    <li><span>Nuts/seeds (e.g., walnuts, almonds, sunflower seeds)</span> <span class="quantity">toasted, for garnish</span></li>
+                                
+                                    <li><span>Fresh mint</span> <span class="quantity">for garnish</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">PREHEAT oven to 200°C (fan).</li>
+                                
+                                    <li style="margin: 3px 0;">BRING a large saucepan of water to boil. Cut the leaves off the cauliflower and trim the stem so it sits flat.</li>
+                                
+                                    <li style="margin: 3px 0;">BOIL cauliflower in salted water for 5 minutes. Then let it steam dry on a kitchen towel for 10 minutes. Pat with another towel if needed.</li>
+                                
+                                    <li style="margin: 3px 0;">MIX marinade ingredients and coat the cauliflower well. Cover with foil and roast for 30 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">REMOVE foil and add the pre-spiced and oiled chickpeas. Roast for another 15-20 minutes until cauliflower is browned and chickpeas are crispy.</li>
+                                
+                                    <li style="margin: 3px 0;">MIX harissa tahini sauce ingredients, and divide into thirds. Blend one third with red pepper, another third with cooked beetroot for color variation.</li>
+                                
+                                    <li style="margin: 3px 0;">TOAST the seeds in a dry pan with a little salt, then set aside.</li>
+                                
+                                    <li style="margin: 3px 0;">SERVE the roasted cauliflower with chickpeas, drizzle with sauce, and garnish with toasted seeds and fresh mint. Enjoy!</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Chana Masala" data-category="Indian, Curry">
+                        <div class="recipe-header">
+                            <h2>Chana Masala</h2>
+                            <div class="categories">Indian, Curry</div>
+                        </div>
+                        <p><strong>Description:</strong> A hearty and flavorful chickpea curry with rich spices.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Chana Masala')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Chana Masala" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Vegetable oil</span> <span class="quantity">2 tbsp</span></li>
+                                
+                                    <li><span>Onion, finely chopped</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Garlic cloves, minced</span> <span class="quantity">3</span></li>
+                                
+                                    <li><span>Ginger, grated</span> <span class="quantity">1-inch piece</span></li>
+                                
+                                    <li><span>Green chili, chopped (optional)</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Cumin seeds</span> <span class="quantity">1 tsp</span></li>
+                                
+                                    <li><span>Ground coriander</span> <span class="quantity">1 tsp</span></li>
+                                
+                                    <li><span>Ground turmeric</span> <span class="quantity">1 tsp</span></li>
+                                
+                                    <li><span>Garam masala</span> <span class="quantity">1 tsp</span></li>
+                                
+                                    <li><span>Ground cumin</span> <span class="quantity">1 tsp</span></li>
+                                
+                                    <li><span>Chickpeas (400g, drained and rinsed)</span> <span class="quantity">1 can</span></li>
+                                
+                                    <li><span>Tomatoes, chopped</span> <span class="quantity">2 large or 1 can (400g) diced tomatoes</span></li>
+                                
+                                    <li><span>Salt</span> <span class="quantity">1 tsp, adjust to taste</span></li>
+                                
+                                    <li><span>Ground black pepper</span> <span class="quantity">½ tsp</span></li>
+                                
+                                    <li><span>Water</span> <span class="quantity">200 ml</span></li>
+                                
+                                    <li><span>Fresh coriander, chopped (for garnish)</span> <span class="quantity">as desired</span></li>
+                                
+                                    <li><span>Lemon juice</span> <span class="quantity">1 tbsp</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">Heat the vegetable oil in a large pan over medium heat. Add cumin seeds and cook for about 30 seconds until fragrant.</li>
+                                
+                                    <li style="margin: 3px 0;">Add the chopped onion and sauté until soft and golden, about 7 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">Add garlic, ginger, and green chili (if using) and cook for 1-2 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">Stir in ground coriander, turmeric, garam masala, and ground cumin. Cook the spices for another minute.</li>
+                                
+                                    <li style="margin: 3px 0;">Add the chopped tomatoes (or canned tomatoes) and cook until they break down and form a thick sauce, about 10 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">Add the chickpeas, salt, pepper, and water. Stir everything together and simmer for 15 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">Finish with lemon juice and garnish with chopped fresh coriander.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Thai Red Curry with Tofu" data-category="Thai, Curry">
+                        <div class="recipe-header">
+                            <h2>Thai Red Curry with Tofu</h2>
+                            <div class="categories">Thai, Curry</div>
+                        </div>
+                        <p><strong>Description:</strong> A flavorful Thai red curry with tofu and vegetables.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Thai Red Curry with Tofu')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Thai Red Curry with Tofu" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Vegetable oil</span> <span class="quantity">2 tbsp</span></li>
+                                
+                                    <li><span>Firm tofu (300g, drained and cubed)</span> <span class="quantity">1 block</span></li>
+                                
+                                    <li><span>Onion, sliced</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Red bell pepper, sliced</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Carrot, julienned</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Zucchini, sliced</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Thai red curry paste</span> <span class="quantity">3 tbsp</span></li>
+                                
+                                    <li><span>Coconut milk</span> <span class="quantity">400 ml (optional, or use tomato base for non-coconut)</span></li>
+                                
+                                    <li><span>Vegetable broth</span> <span class="quantity">200 ml</span></li>
+                                
+                                    <li><span>Soy sauce</span> <span class="quantity">1 tbsp</span></li>
+                                
+                                    <li><span>Brown sugar</span> <span class="quantity">1 tbsp</span></li>
+                                
+                                    <li><span>Fresh basil leaves (for garnish)</span> <span class="quantity">as desired</span></li>
+                                
+                                    <li><span>Lime, cut into wedges (for serving)</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Cooked rice (to serve)</span> <span class="quantity">as needed</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">Heat 1 tbsp of vegetable oil in a large pan over medium heat. Add the tofu cubes and cook until golden brown on all sides.</li>
+                                
+                                    <li style="margin: 3px 0;">In the same pan, heat the remaining 1 tbsp of oil. Add the onion, bell pepper, carrot, and zucchini. Cook for 5-7 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">Add the red curry paste and stir to coat the vegetables. Cook for 1-2 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">Pour in the coconut milk (or tomato base), vegetable broth, soy sauce, and brown sugar. Stir to combine and bring to a simmer.</li>
+                                
+                                    <li style="margin: 3px 0;">Return the tofu to the pan and simmer for another 10 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">Serve with cooked rice, garnished with fresh basil and lime wedges.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Sweet Potato and Spinach Curry" data-category="Curry, Indian">
+                        <div class="recipe-header">
+                            <h2>Sweet Potato and Spinach Curry</h2>
+                            <div class="categories">Curry, Indian</div>
+                        </div>
+                        <p><strong>Description:</strong> A warm and comforting curry with sweet potatoes and spinach.</p>
+                        <button class="expand-button" onclick="toggleRecipe('Sweet Potato and Spinach Curry')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Sweet Potato and Spinach Curry" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Vegetable oil</span> <span class="quantity">2 tbsp</span></li>
+                                
+                                    <li><span>Onion, finely chopped</span> <span class="quantity">1</span></li>
+                                
+                                    <li><span>Garlic cloves, minced</span> <span class="quantity">2</span></li>
+                                
+                                    <li><span>Ginger, grated</span> <span class="quantity">1-inch piece</span></li>
+                                
+                                    <li><span>Sweet potatoes, peeled and cubed</span> <span class="quantity">2 large</span></li>
+                                
+                                    <li><span>Fresh spinach</span> <span class="quantity">200 g</span></li>
+                                
+                                    <li><span>Ground cumin</span> <span class="quantity">1 tsp</span></li>
+                                
+                                    <li><span>Ground coriander</span> <span class="quantity">1 tsp</span></li>
+                                
+                                    <li><span>Ground turmeric</span> <span class="quantity">1 tsp</span></li>
+                                
+                                    <li><span>Ground cinnamon</span> <span class="quantity">½ tsp</span></li>
+                                
+                                    <li><span>Canned diced tomatoes</span> <span class="quantity">1 can (400 g)</span></li>
+                                
+                                    <li><span>Water or vegetable broth</span> <span class="quantity">200 ml</span></li>
+                                
+                                    <li><span>Salt</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Ground black pepper</span> <span class="quantity">to taste</span></li>
+                                
+                                    <li><span>Fresh cilantro, chopped (for garnish)</span> <span class="quantity">as desired</span></li>
+                                
+                                    <li><span>Lime juice</span> <span class="quantity">1 tbsp</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">Heat the vegetable oil in a large pan over medium heat. Add the onion and cook until softened, about 5 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">Add the garlic and ginger and cook for another 1-2 minutes until fragrant.</li>
+                                
+                                    <li style="margin: 3px 0;">Stir in cumin, coriander, turmeric, and cinnamon. Cook for another minute.</li>
+                                
+                                    <li style="margin: 3px 0;">Add the cubed sweet potatoes, tomatoes, and water or vegetable broth. Stir to combine, then cover and simmer for 20-25 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">Add the fresh spinach to the pan and stir until wilted.</li>
+                                
+                                    <li style="margin: 3px 0;">Season with salt, pepper, and lime juice. Garnish with fresh cilantro.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <div class="recipe-item" id="Chili Sin Carne" data-category="Main Course, Mexican">
+                        <div class="recipe-header">
+                            <h2>Chili Sin Carne</h2>
+                            <div class="categories">Main Course, Mexican</div>
+                        </div>
+                        <p><strong>Description:</strong> A hearty, flavorful vegan chili packed with vegetables, beans, and spices. Perfect for a cozy meal!</p>
+                        <button class="expand-button" onclick="toggleRecipe('Chili Sin Carne')">Show Ingredients & Instructions</button>
+                        
+                        <!-- Combined Ingredients and Instructions Container -->
+                        <div class="recipe-details" id="details-Chili Sin Carne" style="display:none;">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                
+                                    <li><span>Red onion</span> <span class="quantity">1/2, finely chopped</span></li>
+                                
+                                    <li><span>Garlic</span> <span class="quantity">3 cloves, minced</span></li>
+                                
+                                    <li><span>Scallions</span> <span class="quantity">1 bunch, finely sliced</span></li>
+                                
+                                    <li><span>Carrots</span> <span class="quantity">3, finely chopped</span></li>
+                                
+                                    <li><span>Celery</span> <span class="quantity">3 stalks, finely chopped</span></li>
+                                
+                                    <li><span>Cilantro</span> <span class="quantity">1 bunch, finely chopped</span></li>
+                                
+                                    <li><span>Jalapeno</span> <span class="quantity">1, finely chopped with seeds removed</span></li>
+                                
+                                    <li><span>Cacao or cocoa powder</span> <span class="quantity">1 tbsp (optional, enhances flavor)</span></li>
+                                
+                                    <li><span>Nutritional yeast</span> <span class="quantity">1 tbsp</span></li>
+                                
+                                    <li><span>Chili powder</span> <span class="quantity">1 tbsp</span></li>
+                                
+                                    <li><span>Maple syrup</span> <span class="quantity">2 tsp (optional, enhances flavor)</span></li>
+                                
+                                    <li><span>Paprika</span> <span class="quantity">2 tsp</span></li>
+                                
+                                    <li><span>Cumin</span> <span class="quantity">2 tsp</span></li>
+                                
+                                    <li><span>Lime</span> <span class="quantity">Juice from 1</span></li>
+                                
+                                    <li><span>Apple cider vinegar</span> <span class="quantity">1 tbsp</span></li>
+                                
+                                    <li><span>Salt</span> <span class="quantity">2 tsp</span></li>
+                                
+                                    <li><span>Black pepper</span> <span class="quantity">1 tsp</span></li>
+                                
+                                    <li><span>Chickpeas</span> <span class="quantity">1 can, drained</span></li>
+                                
+                                    <li><span>Black beans</span> <span class="quantity">1 can, drained</span></li>
+                                
+                                    <li><span>White beans</span> <span class="quantity">1 can, drained</span></li>
+                                
+                                    <li><span>Crushed tomatoes</span> <span class="quantity">1 can (28 oz)</span></li>
+                                
+                                    <li><span>Vegetable broth</span> <span class="quantity">1 cup</span></li>
+                                
+                            </ul>
+                            <h3>Instructions:</h3>
+                            <ol >
+                                
+                                    <li style="margin: 3px 0;">Stovetop: Heat a splash of oil in a large pot over medium heat. Add onion, garlic, scallions, carrots, jalapeno, and celery. Cook for 8 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">Add the remaining ingredients to the pot. Cover and simmer for 20-25 minutes, until everything is cooked through and veggies are tender.</li>
+                                
+                                    <li style="margin: 3px 0;">Instant Pot: Add oil to the Instant Pot. Add onion, garlic, scallions, carrots, jalapeno, and celery. Use the saute function to cook for 8 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">Add the remaining ingredients to the Instant Pot. Cook on high pressure for 12 minutes, and let the pressure release naturally for 10 minutes.</li>
+                                
+                                    <li style="margin: 3px 0;">Let the chili cool slightly and serve.</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
